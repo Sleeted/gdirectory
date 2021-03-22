@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+  color: white;
+}
+a {
+  color: #0091ff;
+  font-weight: bold;
+  transition-duration: 120ms;
+  transition-timing-function: ease;
+}
+a:hover {
+  color: cyan;
+  margin-left: 10px;
+}
+a:active {
+  margin-left: 20px;
+}
+iframe {
+  border: cyan 5px inset;
+}
+button {
+  transition-duration: 120ms;
+}
+button:active {
+  margin-top: 10px;
+}
+h1 {
+  color: cyan;
+  font-weight: bold;
+}
+input {
+  background-color: grey;
+  border: cyan 2px solid;
+  color: cyan;
+}
+
+.scrollable {
+  height: 250px;
+  width: 800px;
+  resize: both;
+  border: grey 5px inset;
+  overflow-y: scroll;
+  background-color: grey;
+  line-height: normal;
+}
+#main {
+  width: 800px;
+  background-color: grey;
+  border: grey 5px inset;
+}
+.message {
+  background-color: #404040;
+  border: #6b6b6b 4px solid;
+}
+.fullScreen {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

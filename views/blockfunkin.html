@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>BF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body { 
+        background-color: black;color: white;
+        top: 0; left: 0;
+        margin-left: auto; margin-right: auto;
+        display: flex; justify-content: center; align-items: center;
+      }
+      #game_canvas { 
+        width: 700; height: 700;
+        top: 0; left: 0;
+        margin-left: auto; margin-right: auto;
+        line-height:200px;
+        display: flex; justify-content: center; align-items: center;
+      }
+      h1 {color: purple}
+    </style>
+    <script src="blockfunkin/funkin.js"></script>
+  </head>
+  <body>
+    <div id="title_screen">
+      <h1>Block Funkin</h1>
+      <p>a game made by rust#1622.</p>
+      <p>Many maps were made by Sleeted#3653</p>
+      <a href="blockeditor.html">Map Editor</a>
+      <br/>
+      <br/>
+      <input id="map_name" placeholder="Map Name" value="tutorial">
+      <br/>
+      <button id="start_button">Play</button>
+      <br/>
+      <button id="show_list">Show Map List</button>
+      <br/>
+      
+      <ol id="map_list" style="display:none;">
+
+      </ol>
+      
+    </div>
+  </body>
+</html>

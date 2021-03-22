@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>The Cool Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body { 
+        background-color: black;color: white;
+        top: 0; left: 0;
+        margin-left: auto; margin-right: auto;
+        display: flex; justify-content: center; align-items: center;
+      }
+      #game_canvas { 
+        width: 700; height: 700;
+        top: 0; left: 0;
+        margin-left: auto; margin-right: auto;
+        line-height:200px;
+        display: flex; justify-content: center; align-items: center;
+      }
+      h1 {color: purple}
+    </style>
+    <script src="jquery.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="blockfunkin/editor.js"></script>
+  </head>
+  <body>
+    <div id="title_screen">
+      <h1>Map Editor</h1>
+      <p>Custom Map Maker</p>
+      <p>This uses almost the same code as the original so you might have some gameplay elements in here that might break the editor.</p>
+      <p>E: Scroll Down | Q: Scroll Up | F: Place Block | X: Remove Block | G: Save As | R: Restart Song | C: Pause Song | V: Play Song | P: Play | L: Stop</p>
+      <p>If something is not working check console (CTRL+SHIFT+I)</p>
+      <p id="version">v2.0</p>
+      <input placeholder="Song Link" id="song_link"><br/>
+      <input placeholder="Song Speed" id="song_speed"><br/>
+      <button id="start_button">Edit</button>
+    </div>
+  </body>
+</html>
