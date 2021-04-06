@@ -58,3 +58,35 @@ input {
     top: 0;
     left: 0;
 }
+
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 20%;
+  top: 0;
+  width: 60%; /* Full width */
+  height: auto; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background: none;
+  background-color: rgb(55, 55, 55);
+  box-shadow: 11px 11px 15px rgb(44, 44, 44);
+  margin: 5% auto;
+  text-align: center;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  resize: both;
+}
+.modal .close {
+  float: right;
+  outline: none;
+  background-color: red;
+  color: white;
+  border-radius: 2px;
+  border-style: none;
+}
+#welcome {
+  height: 50%;
+}
