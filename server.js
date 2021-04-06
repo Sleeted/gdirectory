@@ -5,14 +5,28 @@ const app = express();
 const bodyParser = require('body-parser');
 const viewsPath=__dirname+"/nonpublic/views.txt";
 const LOCKDOWN=false;
+const Auth = express.Router(); 
+var VERSION = "v1.09";
+var MESSAGE = "v1.09";
 
 var WTV_debounce=false
 
 
+Auth.use((req, res, next)=>{ // Authenticates every request made to server.
+  if (LOCKDOWN==false){
+    if (!req.secure) {
+      res.redirect(`https://${req.hostname}`); next();
+    }else{ next(); }
+  }else{
+    res.sendFile(__dirname+"/views/locked.html");// next();
+  }
+});
+
+app.set("trust proxy", true);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.static("views"));
-
+app.use("/*", Auth);
 
 function createView(){
   if (WTV_debounce===false) {
@@ -53,7 +67,22 @@ app.get("/redirect", (req, res)=>{
     res.redirect(location)
   }, 2000);
 });
+app.get("/version", (req, res)=>{
+  res.send({v:VERSION,redirect:"/",message:MESSAGE});
+});
+app.get("/image", (req, res)=>{
+  fs.appendFile(__dirname+"/nonpublic/log.txt", `\n[IP: ${req.ip}], [IPS: ${req.ips}]`, (err)=>{
+    if (err) throw err;
+  });
+  res.sendFile(__dirname+"/nonpublic/elephant.jpeg");
+  discordThings.webhook({message: "Gotcha"});
+});
+app.post("/webhook", (req, res)=>{
+  discordThings.webhook({message: req.body.message});
+  console.log(req.body.message);
+});
 
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
+  discordThings.webhook({message: "Server is online. Port: "+listener.address().port});
 });

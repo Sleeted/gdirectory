@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Classroom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link type="image/png" rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png">
+    <script src="jquery.js"></script>
+    
+    <script>
+      
+      window.addEventListener("load", ()=>{
+        document.getElementById("submit").addEventListener("click", ()=>{
+          $.post("https://gdirectory.glitch.me/webhook", {message: document.getElementById("message").value});
+        });
+      });
+      
+    </script>
+    
+  </head>
+  <body>
+    
+    <h1>Webhook</h1>
+    <a href="/">Main Page</a>
+    <hr/>
+    <br/>
+    <input id="message" placeholder="message">
+    <button id="submit">Send</button>
+    
+  </body>
+</html>
