@@ -10,6 +10,12 @@ Things you can do to contribute:
 * Add new games
 * Add new links in the front page
 
+Things not to contribute:
+* Obfuscated code:
+
+  Do not make your code harder to read or obfuscated. Please make your code understandable.
+  
+
 # Report bugs
 If something isn't working check the console `(Ctrl+Shift+I)` and report the bug here.
 
