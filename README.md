@@ -11,9 +11,7 @@ Things you can do to contribute:
 * Add new links in the front page
 
 Things not to contribute:
-* Obfuscated code:
-
-  Do not make your code harder to read or obfuscated. Please make your code understandable.
+* Obfuscated code: Do not make your code harder to read or obfuscated. Please make your code understandable.
   
 
 # Report bugs
