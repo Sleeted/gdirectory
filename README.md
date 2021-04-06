@@ -1,6 +1,8 @@
 # Gdirectory
 Gdirectory is an open sourced webgame site.  
 If you want to contribute here are the steps for that.  
+There are no advertisements on the website.  
+Some games that are on the website have ads but we are not making any revenue from them.  
 
 # How to contribute
 
