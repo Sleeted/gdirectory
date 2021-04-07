@@ -35,6 +35,7 @@ var games = [
   "https://bobydob.github.io/neo/",
   "https://uploads.ungrounded.net/alternate/1581000/1581619_alternate_120871_r1.zip/?NewgroundsAPI_PublisherID=1&NewgroundsAPI_SandboxID=606b9b2f00063&NewgroundsAPI_SessionID=&NewgroundsAPI_UserName=%26lt%3Bdeleted%26gt%3B&NewgroundsAPI_UserID=0&ng_username=%26lt%3Bdeleted%26gt%3B",
   "https://html5.gamemonetize.com/pv5rvtf9hd9nr878f2rcg8tnzs99z13o/?key=y8&value=default"
+  "https://beta.rbx.place/"
 ]
 var current = 0
 
